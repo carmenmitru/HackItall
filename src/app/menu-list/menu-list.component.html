@@ -1,0 +1,43 @@
+<navbar></navbar>
+<div class="container">
+    <div class="row">
+		<div class="form-group">
+			<input  type="text" class="form-control" placeholder="Search" />
+		</div>
+    <div class="col-md-12">
+			<div class="col-sm-6 col-md-4"  *ngFor="let item of menuList" >
+				<div class="thumbnail anim">
+				
+					<img [src]="item.imagine"  class="img-responsive">
+					<div class="caption">
+						<div class="row">
+							<div class="col-md-6 col-xs-6">
+								<h4>{{item.nume}}</h4>
+							</div>
+							<div class="col-md-6 col-xs-6 price">
+								<h3>
+								<label>&euro;{{item.pret}}</label></h3>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-4">
+								<a class="btn btn-primary btn-product"><span class="glyphicon glyphicon-th-list"></span> Details</a> 
+							</div>
+							<div class="col-md-3">
+								<button  (click)="placeOrder(menuList.indexOf(item))" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span> Order</button>
+							</div>
+							
+						</div>
+
+						<p> </p>
+					</div>
+				</div>
+			</div>
+		
+            
+    </div> 
+    </div>
+
+</div>
+
